@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Menu from '../images/menu.png';
 import Banner from '../images/banner.png';
 import Card1 from '../images/card1.png';
 import Card2 from '../images/card2.png';
@@ -16,8 +15,12 @@ import { DataContext } from '../DataProvider';
 import {Link} from 'react-router-dom';
 
 const Home = () => {
+
+
     const value = useContext(DataContext);
     const [products] =value.products
+
+   
     return (
         <>
         <div className="header">
@@ -30,10 +33,9 @@ const Home = () => {
                        <ul id="MenuItems">
                            <li><Link to="/">Home</Link></li>
                            <li><Link to="/products">Products</Link></li>
-                           <li><Link to="/">Home</Link></li>
+                           <li><Link to="/">Contacts</Link></li>
                        </ul>
                    </nav>
-                   <img src={Menu} className="menu-icon" alt="" />
                </div>
                <div className="side"></div>
                <div className="row">
@@ -121,6 +123,7 @@ const Home = () => {
                             <h2>{product.title}</h2>
                             <p>{product.description}</p>
                             <h2>Rs.{product.price}</h2>
+                            <button>Watch</button>
                         </div>
                 ))
             }

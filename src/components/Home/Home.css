@@ -199,7 +199,7 @@ p{
 
 .container-4{
     width: 100%;
-    background: rgb(243, 193, 235);
+    background: #FAE4E4;
     height: 50vh;
     align-items: center;
     display: flex;
@@ -267,7 +267,7 @@ p{
     margin-top: 50px;
     margin-left: 50px;
     padding: 10px;
-    background: rgb(250, 204, 250);
+    background: #FAE4E4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,7 +292,7 @@ p{
     margin-top: 240px;
     margin-left: 430px;
     padding: 10px;
-    background: rgb(250, 204, 250);
+    background: #FAE4E4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -317,7 +317,7 @@ p{
     margin-top: 35px;
     margin-left: 850px;
     padding: 10px;
-    background: rgb(250, 204, 250);
+    background: #FAE4E4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -362,7 +362,7 @@ p{
 
 .container-6{
     max-width: 1300px;
-    height: 125vh;
+    height: 150vh;
     margin: auto;
     padding: 10px;
     justify-content: center;
@@ -389,7 +389,7 @@ p{
    max-width: 270px;
    width: 100%;
    overflow: hidden;
-   height: 400px;
+   height: 450px;
    padding: 15px;
    margin: 15px;
    cursor: pointer;
@@ -408,6 +408,15 @@ p{
     object-fit: cover;
 }
 
+.container-6-card button{
+    width: 100px;
+    height: 30px;
+    background: #F8D14A;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
 /*-------------------logo-----------------*/
 
 .logos{
@@ -415,7 +424,6 @@ p{
     height: 30vh;
     justify-content: space-between;
     display: flex;
-    background: cornsilk;
 }
 
 .logos img{
@@ -428,7 +436,8 @@ p{
 
 /*--------------------footer----------------*/
 .footer{
-    background: darkcyan;
+    position: absolute;
+    background: #77D18B;
     width: 100%;
     height: 45vh;
     align-items: center;
@@ -473,12 +482,12 @@ p{
     padding: 20px;
     margin-left: 80px;
     margin-top: 40px;
-    background: rgb(93, 33, 141);
+    background: #893B86;
 }
 .short-footer p{
     color: #000;
 }
-@media only screen and (max-width:800px){
+/*@media only screen and (max-width:800px){
     nav ul{
         position: absolute;
         top: 70px;
@@ -507,5 +516,36 @@ p{
 
     .side{
         display: none;
+    }
+}*/
+
+.menu {
+    display: none;
+}
+
+@media (max-width:700px) {
+    ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        opacity: 0.98;
+        z-index: 99;
+        transition: 0.5s ease-in;
+    }
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+    ul li .menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 }
